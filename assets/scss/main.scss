@@ -1,0 +1,98 @@
+.main {
+    &__film {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 1rem;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%), url("../img/film-main.jpg");
+        height: 400px;
+        background-size: cover;
+
+        &__container {
+            margin-left: 20px;
+            width: 70%;
+
+            &__title {
+                font-size: 2rem;
+                margin-top: 15%;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+            }
+
+            &__description {
+                margin-top: 10px;
+                margin-bottom: 40px;
+                text-align: justify;
+            }
+
+            &__btn {
+                &-play {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    color: white;
+                    font-size: 1.2rem;
+                    padding: 15px 30px;
+                    cursor: pointer;
+                    transition: 0.5s ease all;
+                    border-radius: 10px;
+                    margin-right: 15px;
+
+                    & i {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+
+                &-information {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border: none;
+                    color: white;
+                    font-size: 1.2rem;
+                    padding: 15px 30px;
+                    cursor: pointer;
+                    transition: 0.5s ease all;
+                    border-radius: 10px;
+
+                    & i {
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        &__film {
+            &__container{
+                &__btn {
+                    &-information {
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main {
+        &__film {
+            &__container {
+                &__description {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
